@@ -21,6 +21,7 @@ gpt_minimal/
 │   └── requirements.txt   # Project dependencies
 │
 └── Dockerfile             # Dockerfile for building the image
+```
 
 ## How to Run
 
@@ -31,10 +32,15 @@ Clone the repository to your local environment:
 ```bash
 git clone https://github.com/your-username/gpt_minimal.git
 cd gpt_minimal
+```
+
+### 2. Build the Docker Image
 
 docker build -t gpt-minimal .
 
+### 3. Run the Container
 docker run -d -p 8000:8000 gpt-minimal
 
-curl -X POST "http://localhost:8000/generate/" -H "Content-Type: application/json" -d '{"prompt": "Once upon a time"}'
+### 4. GPT Minimal is Ready!
 
+curl -X POST "http://localhost:8000/generate/" -H "Content-Type: application/json" -d '{"prompt": "Once upon a time"}'
